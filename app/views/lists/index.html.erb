@@ -1,0 +1,17 @@
+<div class= "banner">
+<h1><strong>Your lists</strong></h1>
+</div>
+
+<div class= "container">
+<ul>
+
+ <% @lists.each do |list| %>
+ <div class="card-list">
+    <li><%= link_to list.name, list_path(list) %></li>
+  </div>
+  <% end %>
+</ul>
+</div>
+
+
+<button type="button" class="btn btn-secondary"><%= link_to "Add", new_list_path %></button>

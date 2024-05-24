@@ -1,0 +1,10 @@
+<div class= "banner">
+<h1><strong>Create a New List</strong></h1>
+</div>
+
+<div class="container">
+<%= simple_form_for [@list] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Submit", class: "btn btn-secondary" %>
+<% end %>
+</div>

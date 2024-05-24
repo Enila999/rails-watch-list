@@ -1,0 +1,21 @@
+<div class= "banner">
+<h1><strong><%= @list.name %></strong></h1>
+</div>
+
+<p><%= @list.name %></p>
+
+<p><strong>Infos</strong></p>
+<ul>
+  <% @list.bookmarks.each do |bookmark| %>
+  <div class= "card-list">
+    <li><%= bookmark.movie.title%>
+        <%= bookmark.movie.overview%>
+        <%= bookmark.movie.poster_url%>
+        <%= bookmark.movie.rating%>
+        <%= bookmark.comment%>
+    </li>
+    </div>
+  <% end %>
+</ul>
+
+<button type="button" class="btn btn-secondary"><%= link_to "Lists", lists_path %></button>
